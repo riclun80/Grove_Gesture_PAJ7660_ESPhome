@@ -1,0 +1,36 @@
+esphome:
+  name: paj7660
+  friendly_name: paj7660
+
+esp32:
+  board: esp32-c5-devkitc-1
+  framework:
+    type: esp-idf
+
+external_components:
+  - source:
+      type: local
+      path: components
+
+i2c:
+  scl: GPIO5
+  sda: GPIO4
+  scan: true #false
+  frequency: 200kHz
+  id: i2c_bus
+
+pag7660v2:
+  id: my_gesture_sensor
+  address: 0x68
+  i2c_id: i2c_bus
+
+text_sensor:
+  - platform: pag7660v2
+    gesture:
+      name: "Gesture Sensor"
+      
+sensor:
+  - platform: pag7660v2
+    rotation:
+      name: "Gesture Rotation Step"
+      unit_of_measurement: "°"
