@@ -14,7 +14,7 @@ For more information, please visit the [wiki](https://wiki.seeedstudio.com/grove
 
 
 ---
-Original Arduino software is written by Jack Wu for Seeed Studio and modified by Richard Lundholm to be used in ESPHome<br>
+Original Arduino software is written by Jack Wu for Seeed Studio, and this software is modified by Richard Lundholm to be used in ESPHome<br>
 and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check LICENSE for more information.<br>
 
 Contributing to this software is warmly welcomed. You can do this basically by<br>
