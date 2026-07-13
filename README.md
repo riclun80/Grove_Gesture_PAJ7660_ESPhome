@@ -20,11 +20,11 @@ For more information about the sensor, please visit the [wiki](https://wiki.seee
 
 
 ---
-Original Arduino software is written by [Jack Wu](https://github.com/Seeed-Studio/Grove_Gesture) for Seeed Studio, this software is modified by me to be used in ESPHome<br>
+Original Arduino software is written by [Jack Wu](https://github.com/Seeed-Studio/Grove_Gesture) for Seeed Studio, this software is modified by me to be used in ESPHome
 and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check LICENSE for more information.<br>
 
-Contributing to this software is warmly welcomed. You can do this basically by<br>
-[forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
+Contributing to this software is warmly welcomed. You can do this basically by
+[forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above
 for operating guide). Adding change log and your contact into file header is encouraged.<br>
 Thanks for your contribution.
 
