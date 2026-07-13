@@ -2,7 +2,7 @@
 
 <img src=https://files.seeedstudio.com/wiki/grove-gesture-paj7620/main.jpg width=300>
 
-[Grove - Gesture（PAJ7660)](https://www.seeedstudio.com/s/Grove-Gesture（PAJ7620U2）-p-2463.html)
+[Grove Smart IR Gesture Sensor (PAJ7660)](https://www.seeedstudio.com/Grove-Smart-IR-Gesture-Sensor-p-5721.html)
 
 **Description**<br>
 The sensor on the Grove Smart IR Gesture Sensor (PAJ7660/PAG7660) integrates a gesture recognition function with a I2C/SPI/USB interface configurable by DIP switches.<br>
