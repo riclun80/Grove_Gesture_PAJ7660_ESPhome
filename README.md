@@ -1,4 +1,4 @@
-# Grove Smart IR Gesture Sensor (PAJ7660) for ESPHome
+# Grove Smart IR Gesture Sensor (PAJ7660) for use in ESPHome
 
 <img src=https://files.seeedstudio.com/wiki/grove-gesture-paj7620/main.jpg width=300>
 
@@ -6,14 +6,15 @@
 
 **Description**
 
-The sensor on Grove Smart IR Gesture Sensor (PAJ7660) that integrates gesture recognition function with general I2C interface into a single chip. It can recognize 15 gestures including Static Finger,
-Push, Rotate, Tap, Pinch, Grab, Swipe.
+The sensor on the Grove Smart IR Gesture Sensor (PAJ7660) integrates a gesture recognition function with a general I2C/SPI/USB interface into a single chip. This code utilises the I2C interface.
+It can recognise 15 gestures, including Static Finger, Push, Rotate, Tap, Pinch, Grab, and Swipe.
+It has 2 IR LED's, so it recognises gestures in complete darkness!
 
-For more information please visit the [wiki](https://wiki.seeedstudio.com/grove_gesture_paj7660/).
+For more information, please visit the [wiki](https://wiki.seeedstudio.com/grove_gesture_paj7660/).
 
 
 ---
-This software is written by Jack Wu for seeed studio and modified for ESPHome<br>
+Original Arduino software is written by Jack Wu for Seeed Studio and modified by Richard Lundholm to be used in ESPHome<br>
 and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check LICENSE for more information.<br>
 
 Contributing to this software is warmly welcomed. You can do this basically by<br>
