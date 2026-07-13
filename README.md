@@ -1,6 +1,6 @@
 # Grove Smart IR Gesture Sensor (PAJ7660) for use in ESPHome
 
-<img src=https://files.seeedstudio.com/wiki/grove-gesture-paj7620/main.jpg width=300>
+<img src=https://files.seeedstudio.com/wiki/grove-gesture-paj7620/13.png width=300> <img src=https://files.seeedstudio.com/wiki/grove-gesture-paj7620/hardware.png width=300>
 
 [Grove Smart IR Gesture Sensor (PAJ7660)](https://www.seeedstudio.com/Grove-Smart-IR-Gesture-Sensor-p-5721.html)
 
