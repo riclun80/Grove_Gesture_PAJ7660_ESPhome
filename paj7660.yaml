@@ -1,3 +1,4 @@
+############################### Youre device configuration
 esphome:
   name: paj7660
   friendly_name: paj7660
@@ -7,14 +8,16 @@ esp32:
   framework:
     type: esp-idf
 
+    
+############################## Configuration for PAJ7660
 external_components:
   - source:
       type: local
       path: components
 
 i2c:
-  scl: GPIO5
-  sda: GPIO4
+  scl: GPIO5 # Change for your setup
+  sda: GPIO4 # Change for your setup
   scan: true
   frequency: 200kHz
   id: i2c_bus
