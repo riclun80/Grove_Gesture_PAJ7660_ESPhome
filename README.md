@@ -4,20 +4,22 @@
 
 [Grove - Gesture（PAJ7660)](https://www.seeedstudio.com/s/Grove-Gesture（PAJ7620U2）-p-2463.html)
 
-**Description**
+**Description**<br>
+The sensor on the Grove Smart IR Gesture Sensor (PAJ7660/PAG7660) integrates a gesture recognition function with a I2C/SPI/USB interface<br>
+configurable by DIP switches.<br>
+It has 2 IR LED's, so it recognises gestures in complete darkness!<br>
+This code utilises the I2C interface and can recognize 17 types of gestures, such as:<br> 
+Static finger 1 to 5, Push finger 1 to 5, Clockwise rotation, Counter-clockwise rotation, Swipe Left, Swipe Right, Tap, Grab, Pinch.
 
-The sensor on the Grove Smart IR Gesture Sensor (PAJ7660/PAG7660) integrates a gesture recognition function with a general I2C/SPI/USB interface into a single chip. This code utilises the I2C interface.
-It can recognise 15 gestures, including Static Finger, Push, Rotate, Tap, Pinch, Grab, and Swipe.
-It has 2 IR LED's, so it recognises gestures in complete darkness!
-
+**Installation**<br>
 Place the files in the ESPHome folder so the component files end up under \esphome\components\pag7660v2<br>
-Add the lines from paj7660.yaml in your ESP devices YAML to get a "text sensor" with the last **gesture** and a "sensor" with **rotation step**.
+Add the lines from paj7660.yaml in your ESP devices config YAML to get a "text sensor" with the last **gesture** and a "sensor" with **rotation step**.
 
-For more information, please visit the [wiki](https://wiki.seeedstudio.com/grove_gesture_paj7660/).
+For more information about the sensor, please visit the [wiki](https://wiki.seeedstudio.com/grove_gesture_paj7660/).
 
 
 ---
-Original Arduino software is written by [Jack Wu](https://github.com/Seeed-Studio/Grove_Gesture) for Seeed Studio, and this software is modified by me to be used in ESPHome<br>
+Original Arduino software is written by [Jack Wu](https://github.com/Seeed-Studio/Grove_Gesture) for Seeed Studio, this software is modified by me to be used in ESPHome<br>
 and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check LICENSE for more information.<br>
 
 Contributing to this software is warmly welcomed. You can do this basically by<br>
