@@ -1,0 +1,63 @@
+alias: Gesture automation
+description: "PAJ7660 Gesture automation"
+triggers:
+  - trigger: state
+    entity_id:
+      - sensor.gesture_sensor
+    to:
+      - Grab
+    id: Grab
+    from:
+      - 5-finger
+  - trigger: state
+    entity_id:
+      - sensor.gesture_sensor
+    to:
+      - Pinch
+    id: Pinch
+    from:
+      - 2-finger
+conditions:
+actions:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id:
+              - Grab
+        sequence:
+          - action: light.toggle
+            metadata: {}
+            data:
+              transition: 5
+              rgb_color:
+                - 255
+                - 50
+                - 0
+            target:
+              entity_id: light.bed_light
+      - conditions:
+          - condition: trigger
+            id: Pinch
+        sequence:
+          - if:
+              - condition: climate.is_off
+                target:
+                  entity_id: climate.bedroom_ac
+                options:
+                  behavior: any
+                  for: "00:00:00"
+            then:
+              - action: climate.set_hvac_mode
+                metadata: {}
+                target:
+                  entity_id: climate.bedroom_ac
+                data:
+                  hvac_mode: cool
+            else:
+              - action: climate.set_hvac_mode
+                metadata: {}
+                target:
+                  entity_id: climate.bedroom_ac
+                data:
+                  hvac_mode: "off"
+mode: single
