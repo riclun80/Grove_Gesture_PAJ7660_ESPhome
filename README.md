@@ -5,8 +5,7 @@
 [Grove - Gesture（PAJ7660)](https://www.seeedstudio.com/s/Grove-Gesture（PAJ7620U2）-p-2463.html)
 
 **Description**<br>
-The sensor on the Grove Smart IR Gesture Sensor (PAJ7660/PAG7660) integrates a gesture recognition function with a I2C/SPI/USB interface<br>
-configurable by DIP switches.<br>
+The sensor on the Grove Smart IR Gesture Sensor (PAJ7660/PAG7660) integrates a gesture recognition function with a I2C/SPI/USB interface configurable by DIP switches.<br>
 It has 2 IR LED's, so it recognises gestures in complete darkness!<br>
 This code utilises the I2C interface and can recognize 17 types of gestures, such as:<br> 
 Static finger 1 to 5, Push finger 1 to 5, Clockwise rotation, Counter-clockwise rotation, Swipe Left, Swipe Right, Tap, Grab, Pinch.
