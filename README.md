@@ -43,7 +43,7 @@ sensor:
       unit_of_measurement: "°"
 ```
 
-In [home assistant automation.yaml](https://github.com/riclun80/Grove_Gesture_PAJ7660_ESPhome/blob/master/home%20assistant%20automation.yaml) you find an example automation that I utilise for my device installed in my bedroom projector clock.<br>
+In [home assistant automation.yaml](https://github.com/riclun80/Grove_Gesture_PAJ7660_ESPhome/blob/master/home%20assistant%20automation.yaml) (HASS) or [paj7660.yaml](https://github.com/riclun80/Grove_Gesture_PAJ7660_ESPhome/blob/master/paj7660.yaml) (ESP), you find example automation that I made for my bedroom projector clock.<br>
 
 For more information about the sensor, please visit the [wiki](https://wiki.seeedstudio.com/grove_gesture_paj7660/).
 
