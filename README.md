@@ -31,16 +31,16 @@ pag7660v2:
   address: 0x68
   i2c_id: i2c_bus
 
-text_sensor:
-  - platform: pag7660v2
-    gesture:
-      name: "Gesture Sensor"
-      
 sensor:
   - platform: pag7660v2
     rotation:
       name: "Gesture Rotation Step"
       unit_of_measurement: "°"
+
+text_sensor:
+  - platform: pag7660v2
+    gesture:
+      name: "Gesture Sensor"
 ```
 
 In [home assistant automation.yaml](https://github.com/riclun80/Grove_Gesture_PAJ7660_ESPhome/blob/master/home%20assistant%20automation.yaml) (HASS) or [paj7660.yaml](https://github.com/riclun80/Grove_Gesture_PAJ7660_ESPhome/blob/master/paj7660.yaml) (ESP), you find example automation that I made for my bedroom projector clock.<br>
