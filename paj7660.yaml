@@ -1,4 +1,4 @@
-############################### Youre device configuration
+############################### Your device configuration
 esphome:
   name: ESPhome_paj7660
   friendly_name: "ESPhome PAJ7660"
@@ -9,7 +9,27 @@ esp32:
     type: esp-idf
 
 wifi:
-etc.........
+
+light:
+  - platform: esp32_rmt_led_strip
+    rgb_order: GRB
+    pin: $rgb_light_pin
+    num_leds: 12
+    rmt_symbols: 48 #96
+    chipset: ws2812
+    name: "Ric bed light"
+    id: ric_bed_light
+    
+climate:
+  - platform: fujitsu_general
+    id: bedroom_ac
+    name: "Bedroom AC"
+    sensor: bedroom_temperature
+    visual:
+      min_temperature: 7 °C
+      max_temperature: 35 °C
+      temperature_step: 0.5 °C
+# etc.........
 
 ############################## Configuration for PAJ7660
 external_components:
@@ -28,14 +48,54 @@ pag7660v2:
   id: my_gesture_sensor
   address: 0x68
   i2c_id: i2c_bus
-
-text_sensor:
-  - platform: pag7660v2
-    gesture:
-      name: "Gesture Sensor"
       
 sensor:
   - platform: pag7660v2
     rotation:
       name: "Gesture Rotation Step"
       unit_of_measurement: "°"
+      
+text_sensor:
+  - platform: pag7660v2
+    gesture:
+      name: "Gesture Sensor"
+      
+      ###### automation to turn the light and AC on and off locally on the device
+      on_value:
+        then:
+          # We use lambdas to keep track of state transitions: "from -> to"
+          - lambda: |-
+              static std::string last_state = "";
+              std::string current_state = x;
+
+              // --- TRIGGER 1: Grab (from '5-finger' to 'Grab') ---
+              if (last_state == "5-finger" && current_state == "Grab") {
+                ESP_LOGD("gesture", "Grab action triggered! Toggling Bed Light.");
+              
+                // Toggle light with target color (RGB: 255, 50, 0)
+                auto call = id(ric_bed_light).toggle();
+                call.set_rgb(1.0, 0.196, 0.0); // ESPHome RGB values are float ranges [0.0 - 1.0]
+                call.perform();
+              }
+
+              // --- TRIGGER 2: Pinch (from '2-finger' to 'Pinch') ---
+              if (last_state == "2-finger" && current_state == "Pinch") {
+                ESP_LOGD("gesture", "Pinch action triggered! Controlling Bedroom AC.");
+
+                // Check if climate is currently OFF
+                if (id(bedroom_ac).mode == climate::CLIMATE_MODE_OFF) {
+                  // If off, set to COOL
+                  auto call = id(bedroom_ac).make_call();
+                  call.set_mode(climate::CLIMATE_MODE_COOL);
+                  call.perform();
+                } else {
+                  // Otherwise, turn it OFF
+                  auto call = id(bedroom_ac).make_call();
+                  call.set_mode(climate::CLIMATE_MODE_OFF);
+                  call.perform();
+                }
+              }
+
+              // Save the current state as the 'from' state for the next update
+              last_state = current_state;
+
