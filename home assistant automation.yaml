@@ -34,7 +34,7 @@ actions:
                 - 50
                 - 0
             target:
-              entity_id: light.bed_light
+              entity_id: light.ric_bed_light
       - conditions:
           - condition: trigger
             id: Pinch
